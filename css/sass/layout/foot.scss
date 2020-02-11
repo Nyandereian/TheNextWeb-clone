@@ -1,0 +1,101 @@
+.footer-links {
+  padding: 42px 20px 28px;
+}
+
+.social-links, .about-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links {
+  margin-bottom: 1.5em;
+}
+
+.social-icon {
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: #333;
+  height: 40px;
+  margin: 0 8px;
+  width: 40px;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  a {
+    display: block;
+    height: 40px;
+    padding: 12px;
+    width: 40px;
+  }
+
+  div {
+    background-image: url('https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/icons-sprite.svg?1520429355783');
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
+}
+
+.foot-link {
+  margin: 0 6px;
+
+  a {
+    color: #aaa;
+    font-family: Shentox, sans-serif;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+
+.credits {
+  padding: 3em 0;
+
+  p {
+  color: #aaa;
+  font-family: $small-font-fam;
+  font-size: 13px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  }
+
+  img {
+    height: 9px;
+  }
+}
+
+.heart {
+  color: #f42;
+}
+
+#facebook-logo {
+  background-position: -272px -272px;
+}
+
+#twitter-logo {
+  background-position: -1024px -1024px;
+}
+
+#youtube-logo {
+  background-position: -1280px -1280px;
+}
+
+#insta-logo {
+  background-position: -416px -416px;
+}
+
+#pinterest-logo {
+  background-position: -672px -672px;
+}
+
+#rss-logo {
+  background-position: -816px -816px;
+}
+
+#mail-logo {
+  background-position: -576px -576px;
+}

@@ -1,0 +1,18 @@
+$breakpoints: (
+  'sm': ( max-width: 767px ),
+  'md': ( max-width: 825px ),
+  'lg': ( max-width: 1023px )
+) !default;
+
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media #{inspect($breakpoint-value)} {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+$small-font-fam: "ARS Maquette", "Helvetica Neue", Arial, sans-serif;

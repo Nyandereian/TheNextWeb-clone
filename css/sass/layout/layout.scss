@@ -1,0 +1,106 @@
+main {
+  overflow-x: hidden;
+}
+
+.headlines {
+  display: flex;
+
+  @include respond-below('sm') {
+    flex-direction: column;
+  }
+}
+
+.main-headline {
+  min-width: 60%;
+  @include respond-below('sm') {
+    width: 100%;
+  }
+}
+
+.secondary-headline-wrapper {
+  display: flex;
+  flex-flow: column;
+  min-width: 30%;
+}
+
+.small-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 1192px;
+
+  @include respond-below('sm') {
+    flex-direction: column;
+  }
+
+  & > div {
+    flex-basis: 25%;
+    max-width: 21%;
+
+    @include respond-below('lg') {
+      flex-basis: 33%;
+      max-width: 30%;
+    }
+
+    @include respond-below('sm') {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.general-funding-links, .general-deals-links, .category-news {
+  display: flex;
+}
+
+.general-funding-links {
+  @include respond-below('lg') {
+    flex-direction: column;
+    .right {
+      text-align: left;
+    }
+  }
+  // @include respond-below('sm') {
+  //   .right {
+  //     display: flex;
+  //     flex-direction: column;
+  //   }
+  // }
+}
+
+.latest-funding .small-wrapper {
+  @include respond-below('lg') {
+    .funding:last-child {
+      display: none;
+    }
+  }
+}
+
+.category-news {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include respond-below('sm') {
+    flex-flow: column;
+  }
+
+  & > div {
+    flex-basis: 33%;
+    min-width: 33%;
+
+    @include respond-below('lg') {
+      flex-basis: 50%;
+      min-width: 45%;
+    }
+  }
+}
+
+.footer-links {
+  background: rgb(19, 19, 19);
+  color: white;
+}
+
+.credits {
+ background: black;
+ color: white;
+}

@@ -1,0 +1,180 @@
+nav {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 32px 0px;
+  position: relative;
+  z-index: 5;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+}
+
+.nav-logo {
+  display: none;
+  width: 106px;
+
+  @include respond-below('lg') {
+    display: block;
+  }
+
+  a {
+    background-image: linear-gradient(to right bottom, rgb(204, 0, 153), rgb(255, 68, 34) 85%);
+    box-sizing: border-box;
+    display: block;
+    height: 80px;
+    padding: 16px 20px;
+    width: 106px;
+
+    @include respond-below('sm') {
+      height: 48px;
+    }
+
+    img {
+      height: 16px;
+      transform: translateY(16px);
+      width: 66px;
+
+      @include respond-below('sm') {
+        transform: none;
+      }
+    }
+  }
+
+  &:hover a{
+    background-image: url('https://cdn0.tnwcdn.com/wp-content/themes/cyberdelia/assets/img/home-1.gif');
+  }
+}
+
+.nav-wrap {
+  width: 100%;
+}
+
+.top-nav, .bot-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-item.menu-button {
+  display: none;
+  a {
+    color: #f42;
+
+    &:hover {
+      color: #f42;
+    }
+  }
+}
+
+.top-nav {
+  background: #131313;
+  justify-content: space-between;
+  max-height: 32px;
+  padding-left: 8px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 2;
+
+  .left ul, .right ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  li {
+    margin-left: 12px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-family: $small-font-fam;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 32px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  #nav-news {
+    color: #fff;
+  }
+
+  @include respond-below('sm') {
+    display: none;
+  }
+
+  .right {
+    @include respond-below('md') {
+      display: none;
+    }
+  }
+}
+
+.bot-nav {
+  background-color: white;
+  justify-content: flex-end;
+  text-transform: uppercase;
+
+  .left {
+    flex-grow: 2;
+  }
+
+  ul {
+    display: flex;
+    height: 48px;
+    padding-left: 10px;
+  }
+
+  a {
+    color: rgb(170, 170, 170);
+    display: block;
+    font-family: $small-font-fam;
+    font-size: 14px;
+    height: 48px;
+    letter-spacing: .04em;
+    line-height: 1;
+    padding: 18px 10px 0;
+    text-decoration: none;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  @include respond-below('sm') {
+    .left {
+      display: none;
+    }
+    .menu-button {
+      display: inline-block;
+      color: #f42;
+    }
+  }
+}
+
+#search {
+  border-left: 1px solid #eee;
+
+  @include respond-below('sm') {
+    border-right: 1px solid #eee;
+  }
+}
+
+.nav-message {
+  background: rgb(255, 221, 51);
+  font-family: $small-font-fam;
+  font-size: 13px;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+
+  @include respond-below('lg') {
+    padding-left: 126px;
+  }
+
+  @include respond-below('sm') {
+    padding: 0;
+    text-align: center;
+  }
+}
